@@ -2,7 +2,7 @@ import React from "react";
 import warBackground from "../assets/Background.mp4";
 import settingsIcon from "../assets/settingsIcon.png";
 import codingpic from "../assets/coding.jpg";
-import hassanPic from "../assets/hassanProfilePic.jpeg";
+import hassanPic from "../assets/hassanPic.jpeg";
 import { Link } from "react-router-dom";
 
 function Landing() {
@@ -25,13 +25,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      <video
-        src={warBackground}
-        loop
-        muted
-        autoPlay
-        className="absolute w-full h-full object-cover"
-      />
+     
       <div className="absolute top-[30%] flex h-1/2 gap-8">
         <div className=" grid grid-cols-4 gap-2 w-4/6 h-full text-white text-center">
           <Link
