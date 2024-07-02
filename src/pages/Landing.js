@@ -2,7 +2,7 @@ import React from "react";
 import warBackground from "../assets/Background.mp4";
 import settingsIcon from "../assets/settingsIcon.png";
 import codingpic from "../assets/coding.jpg";
-import hassanPic from "../assets/hassanProfilePic.jpeg";
+import hassanPic from "../assets/hassanPic.jpg";
 import { Link } from "react-router-dom";
 
 function Landing() {
