@@ -1,5 +1,6 @@
 import React from "react";
 import warBackground from "../assets/Background.mp4";
+import war from "../assets/war.mp4";
 import settingsIcon from "../assets/settingsIcon.png";
 import codingpic from "../assets/coding.jpg";
 import hassanPic from "../assets/hassanPic.jpg";
@@ -26,7 +27,7 @@ function Landing() {
         </div>
       </div>
       <video
-        src={warBackground}
+        src={war}
         loop
         muted
         autoPlay
