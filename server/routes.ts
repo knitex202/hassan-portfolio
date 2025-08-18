@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertEmailRequestSchema } from "@shared/schema";
-import { createTransporter } from "./email-service";
+import nodemailer from "nodemailer";
 import path from "path";
 import fs from "fs";
 
@@ -215,9 +215,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
 // Email service configuration
 function createTransporter() {
-  const nodemailer = require('nodemailer');
-  
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER || "knitex303@gmail.com",
