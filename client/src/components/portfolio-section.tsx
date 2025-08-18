@@ -6,6 +6,11 @@ import theScenes from "../assets/behind-the-scenes.jpg";
 import eventDocumentation from "../assets/event-documentation.jpg";
 import rapidResponse from "../assets/rapid-response.jpg";
 import campaignTrail from "../assets/campaign-trail.jpg";
+import polAd from "../assets/political-ad.png";
+import eventPoster from "../assets/event-poster.png";
+import socialGraphics from "../assets/social-graphics.jpg";
+import orangeLogo from "../assets/orange-logo.png";
+import posterDesign from "../assets/poster-design.jpg";
 
 export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<'photography' | 'videography' | 'graphics'>('photography');
@@ -55,52 +60,46 @@ export default function PortfolioSection() {
       description: "Professional political campaign video showcasing event coverage and strategic messaging",
       duration: "Video",
       instagramUrl: "https://www.instagram.com/p/DACU9Brs2r4/",
-      thumbnail: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+      thumbnail: "https://scontent-dfw5-1.cdninstagram.com/v/t51.71878-15/503599430_29993995906880689_2362332151578866036_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=110&ig_cache_key=MzQ1OTQxOTYxODM5OTE4NTY1NjI5OTkzOTk1ODMzNTQ3MzYz.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=nF0azkZpB-IQ7kNvwHANS5Q&_nc_oc=AdkQVLLu92nkdmxBbQLqjxiqf98Y-waV6SywDGQTJoclodieIpNgj2dlW6TEDKpvGhw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-dfw5-1.cdninstagram.com&_nc_gid=DDfRuW9zFWnPQIrWny2hvw&oh=00_AfWRTWQ_PhVTGJuB9r98fKo7UB7TEvzcxy8Yy7GXJwpl-Q&oe=68A8F015"
     },
     {
       title: "Digital Campaign Advertisement",
       description: "Strategic messaging and visual storytelling for political campaign",
-      duration: "2:30"
-    },
-    {
-      title: "Campaign Event Highlights",
-      description: "Comprehensive coverage of major political events and rallies",
-      duration: "4:15"
-    },
-    {
-      title: "Candidate Interview Series",
-      description: "Professional interviews and documentary-style content",
-      duration: "15:45"
+      duration: "2:30",
+      instagramUrl: "https://www.instagram.com/p/DAq9gQSNOPA/",
+      thumbnail: "https://scontent-dfw5-2.cdninstagram.com/v/t51.71878-15/500062344_1243327980819106_3045141162450554754_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=MzQ3MDg1Njk2MDE4ODE0NjYyNDEyNDMzMjc5NDA4MTkxMTA%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=UEtC08XMyPoQ7kNvwEFh25j&_nc_oc=AdkfVxPX8L5Vh-VzmyW16CE-WrEVzKZ76IZwb_qahMgD1U_IOQjkdD_EmDk5TiIwYtU&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-dfw5-2.cdninstagram.com&_nc_gid=drN_nlFn0u1JKYqTl_kaAA&oh=00_AfUbNb388Ay8L-oAdoUwLQDncj1dKR-OEads9u2L2IDQSQ&oe=68A90BEF"
     },
     {
       title: "Social Media Video Content",
       description: "Short-form content optimized for digital platforms",
-      duration: "Multiple clips"
+      duration: "Multiple clips",
+      instagramUrl: "https://www.instagram.com/p/DAccta4osKb/",
+      thumbnail: "https://scontent-dfw5-2.cdninstagram.com/v/t51.71878-15/503154039_701621156142136_8807042988477289139_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=102&ig_cache_key=MzQ2Njc3MjA3OTcxNDY4MTQ5OTcwMTYyMTE0NjE0MjEzNw%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=AlUyx_He144Q7kNvwHrdhnL&_nc_oc=AdlwDNMArSfiFnE0bf404oJMdJexRTw2I_rqvIFpORFXB2o9kxa5ew1tll4bLvLm6_8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-dfw5-2.cdninstagram.com&_nc_gid=VWYuuUU-OAFHGwvkpyrbow&oh=00_AfWZU2kmNMB7LBDmM8ezuI-UxZNULF7UyedoNisQpZIsgw&oe=68A90C1F"
     }
   ];
 
   const graphicsItems = [
     {
-      src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: orangeLogo,
+      fullSrc: orangeLogo,
       title: "Campaign Logo Design",
       description: "Professional branding for political campaigns"
     },
     {
-      src: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: socialGraphics,
+      fullSrc: socialGraphics,
       title: "Social Media Graphics",
       description: "Engaging digital content for social platforms"
     },
     {
-      src: "https://images.unsplash.com/photo-1558655146-364adaf25c27?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1558655146-364adaf25c27?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: eventPoster,
+      fullSrc: eventPoster,
       title: "Event Posters",
       description: "Eye-catching promotional materials"
     },
     {
-      src: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: polAd,
+      fullSrc: polAd,
       title: "Digital Infographics",
       description: "Data visualization and policy explanations"
     },
@@ -111,8 +110,8 @@ export default function PortfolioSection() {
       description: "User interface design for campaign websites"
     },
     {
-      src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: posterDesign,
+      fullSrc: posterDesign,
       title: "Print Campaign Materials",
       description: "Brochures, flyers, and direct mail design"
     }

@@ -22,7 +22,7 @@ export default function LightboxModal() {
       onClick={handleBackdropClick}
       data-testid="lightbox-modal"
     >
-      <div className="relative max-w-4xl max-h-full p-4">
+      <div className="relative max-w-xl max-h-full p-4">
         <button 
           onClick={closeLightbox} 
           className="absolute top-4 right-4 text-white text-2xl z-10 hover:bg-black/20 rounded-full p-2"
@@ -34,7 +34,7 @@ export default function LightboxModal() {
           id="lightbox-image" 
           src="" 
           alt="" 
-          className="max-w-full max-h-full object-contain"
+          className="max-w-full max-h-full object-contain "
           data-testid="lightbox-image"
         />
       </div>
