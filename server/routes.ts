@@ -223,6 +223,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Serve Kamala rally image
+  app.get("/api/kamala-rally-image", (req, res) => {
+    const imagePath = path.join(process.cwd(), "attached_assets", "DSC04567_1755482571187.JPG");
+    
+    if (fs.existsSync(imagePath)) {
+      res.setHeader('Content-Type', 'image/jpeg');
+      res.sendFile(imagePath);
+    } else {
+      res.status(404).json({ message: "Rally image not found" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
