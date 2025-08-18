@@ -31,11 +31,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
             <style>
               body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 20px; }
               .container { max-width: 600px; margin: 0 auto; background: white; }
-              .header { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 30px; text-align: center; }
+              .header { background: linear-gradient(135deg, #5fb3b3, #4a9999); color: white; padding: 30px; text-align: center; }
+              .logo { max-width: 300px; height: auto; margin-bottom: 20px; }
               .content { padding: 30px; }
               .alert-box { background: #fef2f2; border-left: 4px solid #ef4444; padding: 20px; margin: 20px 0; }
               .alert-title { font-weight: bold; color: #dc2626; margin-bottom: 10px; }
-              .cta-button { display: inline-block; background: #3b82f6; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px 0; }
+              .cta-button { display: inline-block; background: #5fb3b3; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px 0; }
               .footer { background: #f8fafc; padding: 20px; text-align: center; color: #64748b; }
               ul { margin: 10px 0; padding-left: 20px; }
               li { margin: 5px 0; color: #dc2626; }
@@ -44,6 +45,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           <body>
             <div class="container">
               <div class="header">
+                <img src="https://7a958f18-e3a0-49a6-9b0b-2cd644c12f60-00-2fkv1nnndsehh.riker.replit.dev/api/crockett-logo" alt="Jasmine Crockett - Democrat for US Congress" class="logo" />
                 <h1>Texas Gerrymandering Crisis</h1>
                 <p>Rep. Jasmine Crockett Needs Your Support</p>
               </div>
@@ -206,6 +208,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.download(resumePath, "Hassan_Wilson_Resume_2025.pdf");
     } else {
       res.status(404).json({ message: "Resume file not found" });
+    }
+  });
+
+  // Serve Jasmine Crockett logo
+  app.get("/api/crockett-logo", (req, res) => {
+    const logoPath = path.join(process.cwd(), "attached_assets", "387c5228-bc91-4147-8e5d-35ae7b22decf-IMG_9198_1755480747133.jpg");
+    
+    if (fs.existsSync(logoPath)) {
+      res.setHeader('Content-Type', 'image/jpeg');
+      res.sendFile(logoPath);
+    } else {
+      res.status(404).json({ message: "Logo file not found" });
     }
   });
 

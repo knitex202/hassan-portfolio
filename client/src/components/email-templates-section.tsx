@@ -50,6 +50,9 @@ export default function EmailTemplatesSection() {
       content.innerHTML = `
         <div class="email-preview bg-white border rounded-lg p-6">
           <div class="border-b pb-4 mb-4">
+            <div class="text-center mb-4">
+              <img src="/api/crockett-logo" alt="Jasmine Crockett - Democrat for US Congress" class="max-w-xs mx-auto h-auto" />
+            </div>
             <h4 class="font-semibold text-lg">Texas Gerrymandering Crisis - Rep. Crockett Needs Your Support</h4>
             <p class="text-sm text-gray-500">To: Sample Recipient | From: knitex303@gmail.com</p>
           </div>
@@ -169,6 +172,9 @@ export default function EmailTemplatesSection() {
               <div className="p-6">
                 <div className="bg-slate-50 p-4 rounded-lg mb-6 max-h-96 overflow-y-auto border">
                   <div className="text-sm">
+                    <div className="text-center mb-4">
+                      <img src="/api/crockett-logo" alt="Jasmine Crockett - Democrat for US Congress" className="max-w-48 mx-auto h-auto" />
+                    </div>
                     <div className="mb-4 pb-2 border-b">
                       <strong>Subject:</strong> Texas Gerrymandering Crisis - Rep. Crockett Needs Your Support
                     </div>
