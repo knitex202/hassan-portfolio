@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Camera, Video, Play, Palette } from "lucide-react";
+import { Camera, Video, Play, Palette, ExternalLink } from "lucide-react";
 import kamalaRally from "../assets/kamala-rally.jpg";
 import kCommunity from "../assets/kamala-community.jpg"
 import theScenes from "../assets/behind-the-scenes.jpg";
@@ -50,6 +50,13 @@ export default function PortfolioSection() {
   ];
 
   const videographyItems = [
+    {
+      title: "Campaign Video Content",
+      description: "Professional political campaign video showcasing event coverage and strategic messaging",
+      duration: "Video",
+      instagramUrl: "https://www.instagram.com/p/DACU9Brs2r4/",
+      thumbnail: "https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&w=600&h=400&fit=crop"
+    },
     {
       title: "Digital Campaign Advertisement",
       description: "Strategic messaging and visual storytelling for political campaign",
@@ -208,24 +215,54 @@ export default function PortfolioSection() {
                   className="bg-white rounded-xl shadow-lg overflow-hidden"
                   data-testid={`video-item-${index}`}
                 >
-                  <div className="aspect-video bg-slate-200 flex items-center justify-center">
-                    <div className="text-center">
-                      <Play className="text-4xl text-blue-accent mb-2 mx-auto" size={48} />
-                      <p className="text-warm-gray" data-testid={`video-title-${index}`}>
-                        {item.title}
-                      </p>
-                      <p className="text-sm text-warm-gray" data-testid={`video-duration-${index}`}>
-                        {item.duration}
-                      </p>
+                  {item.instagramUrl && item.thumbnail ? (
+                    <div className="aspect-video relative overflow-hidden">
+                      <img 
+                        src={item.thumbnail} 
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                        <Play className="text-white" size={48} />
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div className="aspect-video bg-slate-200 flex items-center justify-center">
+                      <div className="text-center">
+                        <Play className="text-4xl text-blue-accent mb-2 mx-auto" size={48} />
+                        <p className="text-warm-gray" data-testid={`video-title-${index}`}>
+                          {item.title}
+                        </p>
+                        <p className="text-sm text-warm-gray" data-testid={`video-duration-${index}`}>
+                          {item.duration}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                   <div className="p-6">
                     <h3 className="font-semibold text-navy mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-warm-gray text-sm" data-testid={`video-description-${index}`}>
+                    <p className="text-warm-gray text-sm mb-4" data-testid={`video-description-${index}`}>
                       {item.description}
                     </p>
+                    {item.instagramUrl && (
+                      <a 
+                        href={item.instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-colors"
+                        data-testid={`instagram-link-${index}`}
+                      >
+                        <ExternalLink className="mr-2" size={16} />
+                        View on Instagram
+                      </a>
+                    )}
+                    {!item.instagramUrl && (
+                      <p className="text-sm text-warm-gray" data-testid={`video-duration-${index}`}>
+                        Duration: {item.duration}
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
