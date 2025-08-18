@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Camera, Video, Play } from "lucide-react";
+import { Camera, Video, Play, Palette } from "lucide-react";
 import kamalaRally from "../assets/kamala-rally.jpg";
 
 export default function PortfolioSection() {
-  const [activeTab, setActiveTab] = useState<'photography' | 'videography'>('photography');
+  const [activeTab, setActiveTab] = useState<'photography' | 'videography' | 'graphics'>('photography');
 
   const photographyItems = [
     {
@@ -67,6 +67,45 @@ export default function PortfolioSection() {
     }
   ];
 
+  const graphicsItems = [
+    {
+      src: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      fullSrc: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      title: "Campaign Logo Design",
+      description: "Professional branding for political campaigns"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      fullSrc: "https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      title: "Social Media Graphics",
+      description: "Engaging digital content for social platforms"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1558655146-364adaf25c27?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      fullSrc: "https://images.unsplash.com/photo-1558655146-364adaf25c27?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      title: "Event Posters",
+      description: "Eye-catching promotional materials"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      fullSrc: "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      title: "Digital Infographics",
+      description: "Data visualization and policy explanations"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      fullSrc: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      title: "Website Design Mockups",
+      description: "User interface design for campaign websites"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
+      fullSrc: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      title: "Print Campaign Materials",
+      description: "Brochures, flyers, and direct mail design"
+    }
+  ];
+
   const openLightbox = (src: string) => {
     const lightbox = document.getElementById('lightbox') as HTMLElement;
     const lightboxImage = document.getElementById('lightbox-image') as HTMLImageElement;
@@ -111,6 +150,18 @@ export default function PortfolioSection() {
               >
                 <Video className="inline mr-2" size={20} />
                 Videography
+              </button>
+              <button 
+                className={`px-6 py-3 rounded-md font-medium transition-colors ${
+                  activeTab === 'graphics' 
+                    ? 'bg-blue-accent text-white' 
+                    : 'text-warm-gray hover:text-navy'
+                }`}
+                onClick={() => setActiveTab('graphics')}
+                data-testid="tab-graphics"
+              >
+                <Palette className="inline mr-2" size={20} />
+                Graphics
               </button>
             </div>
           </div>
@@ -168,6 +219,34 @@ export default function PortfolioSection() {
                       {item.title}
                     </h3>
                     <p className="text-warm-gray text-sm" data-testid={`video-description-${index}`}>
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Graphics Portfolio */}
+          {activeTab === 'graphics' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-testid="graphics-gallery">
+              {graphicsItems.map((item, index) => (
+                <div 
+                  key={index}
+                  className="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer"
+                  onClick={() => openLightbox(item.fullSrc)}
+                  data-testid={`graphics-item-${index}`}
+                >
+                  <img 
+                    src={item.src} 
+                    alt={item.title} 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-semibold text-navy mb-2" data-testid={`graphics-title-${index}`}>
+                      {item.title}
+                    </h3>
+                    <p className="text-warm-gray text-sm" data-testid={`graphics-description-${index}`}>
                       {item.description}
                     </p>
                   </div>
