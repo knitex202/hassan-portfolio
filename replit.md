@@ -2,7 +2,20 @@
 
 ## Overview
 
-This is a professional portfolio website for Hassan Wilson, a Full Stack Software Engineer and Content Strategist with 10+ years of experience in digital strategy, political campaigns, and software development. The application serves as both a showcase of professional work and a demonstration of technical capabilities, featuring sections for about information, experience, portfolio work, and contact details. The site includes interactive email template previews and a sophisticated UI built with modern web technologies.
+This is a professional portfolio website for Hassan Wilson, a Full Stack Software Engineer and Content Strategist with 10+ years of experience in digital strategy, political campaigns, and software development. The application showcases professional work and technical capabilities with sections for about information, experience timeline, photography/videography portfolio, custom email templates, and contact details. The site features live email template sending functionality and responsive design optimized for all devices.
+
+## Recent Updates (August 2025)
+
+✓ Complete portfolio website built with modern React/TypeScript stack
+✓ Photography gallery with lightbox modal for campaign and event coverage
+✓ Videography showcase highlighting political and digital content work  
+✓ Two custom email templates for political campaigns:
+  - Jasmine Crockett gerrymandering action email with ActBlue donation integration
+  - National Guard deployment response email for crisis communication
+✓ Live email sending functionality using Nodemailer and Gmail SMTP
+✓ Resume download feature serving the attached PDF document
+✓ Professional UI design with navy/blue color scheme and smooth animations
+✓ Mobile-responsive navigation and layout optimization
 
 ## User Preferences
 
