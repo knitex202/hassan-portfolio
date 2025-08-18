@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Camera, Video, Play } from "lucide-react";
+import kamalaRally from "../assets/kamala-rally.jpg";
 
 export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<'photography' | 'videography'>('photography');
 
   const photographyItems = [
     {
-      src: "/api/kamala-rally-image",
-      fullSrc: "/api/kamala-rally-image",
+      src: kamalaRally,
+      fullSrc: kamalaRally,
       title: "Campaign Rally Coverage",
       description: "High-energy political event photography"
     },
