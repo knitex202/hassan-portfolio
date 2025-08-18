@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Camera, Video, Play, Palette } from "lucide-react";
 import kamalaRally from "../assets/kamala-rally.jpg";
+import kCommunity from "../assets/kamala-community.jpg"
+import theScenes from "../assets/behind-the-scenes.jpg";
+import eventDocumentation from "../assets/event-documentation.jpg";
+import rapidResponse from "../assets/rapid-response.jpg";
+import campaignTrail from "../assets/campaign-trail.jpg";
 
 export default function PortfolioSection() {
   const [activeTab, setActiveTab] = useState<'photography' | 'videography' | 'graphics'>('photography');
@@ -13,32 +18,32 @@ export default function PortfolioSection() {
       description: "High-energy political event photography"
     },
     {
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
-      title: "Executive Portraits",
-      description: "Professional headshots for campaigns"
+      src: rapidResponse,
+      fullSrc: rapidResponse,
+      title: "Rapid Response",
+      description: "5-minute turnaround for urgent coverage"
     },
     {
-      src: "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: eventDocumentation,
+      fullSrc: eventDocumentation,
       title: "Event Documentation",
       description: "Comprehensive event coverage"
     },
     {
-      src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: kCommunity,
+      fullSrc: kCommunity,
       title: "Community Documentation",
       description: "Grassroots movement photography"
     },
     {
-      src: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: campaignTrail,
+      fullSrc: campaignTrail,
       title: "Motorcade Coverage",
       description: "Presidential campaign trail documentation"
     },
     {
-      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&w=400&h=300&fit=crop",
-      fullSrc: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&w=800&h=600&fit=crop",
+      src: theScenes,
+      fullSrc: theScenes,
       title: "Behind the Scenes",
       description: "Campaign headquarters documentation"
     }
