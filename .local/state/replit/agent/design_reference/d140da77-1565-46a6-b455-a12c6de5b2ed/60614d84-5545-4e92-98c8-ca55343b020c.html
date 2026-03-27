@@ -1,0 +1,756 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hassan Wilson - Content Strategist & Frontend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': '#1e293b',
+                        'blue-accent': '#3b82f6',
+                        'warm-gray': '#64748b',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-4px);
+        }
+        .modal {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-inter bg-slate-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-navy">Hassan Wilson</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-warm-gray hover:text-blue-accent transition-colors">Home</a>
+                    <a href="#about" class="text-warm-gray hover:text-blue-accent transition-colors">About</a>
+                    <a href="#experience" class="text-warm-gray hover:text-blue-accent transition-colors">Experience</a>
+                    <a href="#portfolio" class="text-warm-gray hover:text-blue-accent transition-colors">Portfolio</a>
+                    <a href="#email-templates" class="text-warm-gray hover:text-blue-accent transition-colors">Email Templates</a>
+                    <a href="#contact" class="text-warm-gray hover:text-blue-accent transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-navy">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-32 pt-40">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Hassan Wilson</h1>
+                <p class="text-xl md:text-2xl mb-4 text-blue-200">Content & Digital Strategist</p>
+                <p class="text-lg md:text-xl mb-8 text-slate-300">Full Stack Software Engineer & Frontend Developer</p>
+                <p class="text-lg mb-12 text-slate-300 max-w-3xl mx-auto">
+                    Over 10 years of professional coding experience specializing in AI, mobile development, and digital strategy. 
+                    Proven track record in high-profile political campaigns and innovative tech solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#portfolio" class="bg-blue-accent hover:bg-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#" class="border border-white hover:bg-white hover:text-navy px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-navy mb-12 text-center">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-navy mb-6">Full Stack Engineer & Content Strategist</h3>
+                        <p class="text-warm-gray mb-6 leading-relaxed">
+                            With over 10 years of professional experience, I combine technical expertise in software development 
+                            with strategic content creation and digital marketing. My unique background spans high-profile political 
+                            campaigns, innovative fintech solutions, and comprehensive digital strategies.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-4 bg-slate-50 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-accent">10+</div>
+                                <div class="text-sm text-warm-gray">Years Experience</div>
+                            </div>
+                            <div class="text-center p-4 bg-slate-50 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-accent">5+</div>
+                                <div class="text-sm text-warm-gray">Programming Languages</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-100 p-8 rounded-2xl">
+                        <h4 class="text-xl font-semibold text-navy mb-4">Core Expertise</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <i class="fas fa-code text-blue-accent mr-3"></i>
+                                <span>Full Stack Development (Java, JavaScript, Python, C++)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-mobile-alt text-blue-accent mr-3"></i>
+                                <span>Mobile Development (Kotlin, Android)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-chart-line text-blue-accent mr-3"></i>
+                                <span>Digital Strategy & Campaign Management</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-camera text-blue-accent mr-3"></i>
+                                <span>Photography & Videography</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-paint-brush text-blue-accent mr-3"></i>
+                                <span>Graphic Design & Content Creation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-navy mb-12 text-center">Professional Experience</h2>
+                
+                <!-- @COMPONENT: ExperienceTimeline -->
+                <div class="space-y-8">
+                    <!-- Kamala Harris Campaign -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-accent">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-navy">Content and Digital Strategist</h3>
+                                <p class="text-blue-accent font-medium">Kamala Harris For President (Deputy Digital Director)</p>
+                            </div>
+                            <span class="text-warm-gray font-medium mt-2 md:mt-0">2024 - Nov. 2024</span>
+                        </div>
+                        <p class="text-warm-gray leading-relaxed mb-4">
+                            Planned, developed, and managed the organization's online presence and content strategy. 
+                            Aligned digital content with campaign goals to engage target audiences and drive conversions. 
+                            Served as lead photographer/videographer and motorcade photographer when needed.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Digital Strategy</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Photography</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Automation Systems</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">NGP VAN</span>
+                        </div>
+                    </div>
+
+                    <!-- Viva Fund -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-green-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-navy">Full Stack Developer</h3>
+                                <p class="text-green-600 font-medium">Viva Renter and Investor Dashboard</p>
+                            </div>
+                            <span class="text-warm-gray font-medium mt-2 md:mt-0">2021 - 2023</span>
+                        </div>
+                        <p class="text-warm-gray leading-relaxed mb-4">
+                            Designed projections graphs for the renter and landlord dashboard using Bubble.io. 
+                            Developed backend API using JavaScript to connect banking systems to the platform. 
+                            Focused on debugging and ensuring smooth releases.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Bubble.io</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">API Development</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">FinTech</span>
+                        </div>
+                    </div>
+
+                    <!-- Political Campaigns -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-purple-500">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-semibold text-navy">Campaign Technology Director</h3>
+                                <p class="text-purple-600 font-medium">Multiple Political Campaigns</p>
+                            </div>
+                            <span class="text-warm-gray font-medium mt-2 md:mt-0">2018 - 2021</span>
+                        </div>
+                        <p class="text-warm-gray leading-relaxed mb-4">
+                            Created and managed campaign websites and technology infrastructure. Designed signage, 
+                            created strategic placement maps via NGP VAN, and trained volunteers on voter database systems. 
+                            Served as field organizer, graphics designer, and operations team member.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Web Development</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Graphics Design</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">NGP VAN</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Team Training</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: ExperienceTimeline -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-navy mb-12 text-center">Portfolio</h2>
+                
+                <!-- Portfolio Navigation -->
+                <div class="flex justify-center mb-12">
+                    <div class="bg-slate-100 p-1 rounded-lg">
+                        <button class="portfolio-tab active px-6 py-3 rounded-md font-medium transition-colors bg-blue-accent text-white" data-tab="photography">
+                            <i class="fas fa-camera mr-2"></i>Photography
+                        </button>
+                        <button class="portfolio-tab px-6 py-3 rounded-md font-medium transition-colors text-warm-gray hover:text-navy" data-tab="videography">
+                            <i class="fas fa-video mr-2"></i>Videography
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Photography Portfolio -->
+                <!-- @COMPONENT: PhotographyGallery -->
+                <div id="photography-content" class="portfolio-content">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Campaign Photography -->
+                        <!-- Professional political rally with diverse crowd -->
+                        <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&w=800&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&w=400&h=300&fit=crop" alt="Political rally photography" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-navy mb-2">Campaign Rally Coverage</h3>
+                                <p class="text-warm-gray text-sm">High-energy political event photography</p>
+                            </div>
+                        </div>
+
+                        <!-- Portrait Photography -->
+                        <!-- Professional headshot of diverse political candidate -->
+                        <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=800&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=400&h=300&fit=crop" alt="Professional portrait photography" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-navy mb-2">Executive Portraits</h3>
+                                <p class="text-warm-gray text-sm">Professional headshots for campaigns</p>
+                            </div>
+                        </div>
+
+                        <!-- Event Photography -->
+                        <!-- Crowded political event with speakers and banners -->
+                        <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1541872705-1f73c6400ec9?ixlib=rb-4.0.3&w=800&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1541872705-1f73c6400ec9?ixlib=rb-4.0.3&w=400&h=300&fit=crop" alt="Event photography coverage" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-navy mb-2">Event Documentation</h3>
+                                <p class="text-warm-gray text-sm">Comprehensive event coverage</p>
+                            </div>
+                        </div>
+
+                        <!-- Street Photography -->
+                        <!-- Urban street scene with people and movement -->
+                        <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&w=800&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&w=400&h=300&fit=crop" alt="Street photography documentation" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-navy mb-2">Community Documentation</h3>
+                                <p class="text-warm-gray text-sm">Grassroots movement photography</p>
+                            </div>
+                        </div>
+
+                        <!-- Campaign Trail -->
+                        <!-- Presidential motorcade or political convoy -->
+                        <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&w=800&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&w=400&h=300&fit=crop" alt="Motorcade photography" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-navy mb-2">Motorcade Coverage</h3>
+                                <p class="text-warm-gray text-sm">Presidential campaign trail documentation</p>
+                            </div>
+                        </div>
+
+                        <!-- Behind the Scenes -->
+                        <!-- Campaign office with staff working on computers -->
+                        <div class="portfolio-item bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&w=800&h=600&fit=crop')">
+                            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&w=400&h=300&fit=crop" alt="Behind the scenes campaign photography" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-navy mb-2">Behind the Scenes</h3>
+                                <p class="text-warm-gray text-sm">Campaign headquarters documentation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: PhotographyGallery -->
+
+                <!-- Videography Portfolio -->
+                <!-- @COMPONENT: VideographyGallery -->
+                <div id="videography-content" class="portfolio-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="aspect-video bg-slate-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-4xl text-blue-accent mb-2"></i>
+                                    <p class="text-warm-gray">Campaign Ad - Digital Strategy</p>
+                                    <p class="text-sm text-warm-gray">2:30 duration</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-semibold text-navy mb-2">Digital Campaign Advertisement</h3>
+                                <p class="text-warm-gray text-sm">Strategic messaging and visual storytelling for political campaign</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="aspect-video bg-slate-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-4xl text-blue-accent mb-2"></i>
+                                    <p class="text-warm-gray">Event Highlights Reel</p>
+                                    <p class="text-sm text-warm-gray">4:15 duration</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-semibold text-navy mb-2">Campaign Event Highlights</h3>
+                                <p class="text-warm-gray text-sm">Comprehensive coverage of major political events and rallies</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="aspect-video bg-slate-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-4xl text-blue-accent mb-2"></i>
+                                    <p class="text-warm-gray">Interview Series</p>
+                                    <p class="text-sm text-warm-gray">15:45 duration</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-semibold text-navy mb-2">Candidate Interview Series</h3>
+                                <p class="text-warm-gray text-sm">Professional interviews and documentary-style content</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="aspect-video bg-slate-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-4xl text-blue-accent mb-2"></i>
+                                    <p class="text-warm-gray">Social Media Content</p>
+                                    <p class="text-sm text-warm-gray">Multiple clips</p>
+                                </div>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-semibold text-navy mb-2">Social Media Video Content</h3>
+                                <p class="text-warm-gray text-sm">Short-form content optimized for digital platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: VideographyGallery -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Templates Section -->
+    <section id="email-templates" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-navy mb-12 text-center">Email Template Showcase</h2>
+                <p class="text-warm-gray text-center mb-12 max-w-3xl mx-auto">
+                    Professional email templates designed for political campaigns and advocacy organizations. 
+                    These templates demonstrate strategic messaging, compelling design, and effective call-to-action placement.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Template 1: Jasmine Crockett -->
+                    <!-- @COMPONENT: EmailTemplate1 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="p-6 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                            <h3 class="text-xl font-semibold mb-2">
+                                <i class="fas fa-balance-scale mr-2"></i>
+                                Gerrymandering Action Template
+                            </h3>
+                            <p class="text-blue-100">Rep. Jasmine Crockett (D-TX) Call to Action</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="bg-slate-50 p-4 rounded-lg mb-6 max-h-96 overflow-y-auto border">
+                                <div class="text-sm">
+                                    <div class="mb-4 pb-2 border-b">
+                                        <strong>Subject:</strong> Texas Gerrymandering Crisis - Rep. Crockett Needs Your Support
+                                    </div>
+                                    <div class="space-y-3 text-gray-700">
+                                        <p><strong>Dear [Name],</strong></p>
+                                        <p>Gerrymandering in Texas has reached a breaking point. Our districts are being manipulated to silence minority voices and undermine fair representation.</p>
+                                        <p><strong>Representative Jasmine Crockett (D-TX)</strong> is leading the fight for fair redistricting, but she needs our immediate support to continue this critical work.</p>
+                                        <div class="bg-red-50 p-3 rounded border-l-4 border-red-400">
+                                            <p class="font-semibold text-red-800">The Facts:</p>
+                                            <ul class="list-disc ml-4 text-red-700 text-sm">
+                                                <li>Texas loses representation through manipulated district lines</li>
+                                                <li>Communities of color are systematically divided</li>
+                                                <li>Fair elections require fair maps</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Your action today can help Rep. Crockett fight back against these anti-democratic practices.</strong></p>
+                                        <div class="text-center my-6">
+                                            <div class="bg-blue-600 text-white px-6 py-3 rounded-lg inline-block font-semibold">
+                                                SUPPORT REP. CROCKETT TODAY →
+                                            </div>
+                                        </div>
+                                        <p class="text-sm">Every dollar helps Rep. Crockett continue her vital work in Congress fighting for fair representation and democratic values.</p>
+                                        <p class="text-sm"><strong>Thank you for standing with us,</strong><br>Hassan Wilson<br>Digital Strategist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openEmailModal('crockett')" class="flex-1 bg-blue-accent hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                    <i class="fas fa-eye mr-2"></i>Preview Template
+                                </button>
+                                <button onclick="sendSampleEmail('crockett')" class="flex-1 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                    <i class="fas fa-paper-plane mr-2"></i>Send Sample
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_COMPONENT: EmailTemplate1 -->
+
+                    <!-- Template 2: National Guard Response -->
+                    <!-- @COMPONENT: EmailTemplate2 -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="p-6 bg-gradient-to-r from-red-600 to-red-700 text-white">
+                            <h3 class="text-xl font-semibold mb-2">
+                                <i class="fas fa-shield-alt mr-2"></i>
+                                Crisis Response Template
+                            </h3>
+                            <p class="text-red-100">National Guard Deployment & Protest Coverage</p>
+                        </div>
+                        <div class="p-6">
+                            <div class="bg-slate-50 p-4 rounded-lg mb-6 max-h-96 overflow-y-auto border">
+                                <div class="text-sm">
+                                    <div class="mb-4 pb-2 border-b">
+                                        <strong>Subject:</strong> Urgent: National Guard Deployment Response - Community Safety Alert
+                                    </div>
+                                    <div class="space-y-3 text-gray-700">
+                                        <p><strong>Community Members,</strong></p>
+                                        <p>President Trump's deployment of National Guard troops has escalated tensions nationwide, with significant protest activity emerging across multiple cities.</p>
+                                        <div class="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
+                                            <p class="font-semibold text-yellow-800">Current Situation:</p>
+                                            <ul class="list-disc ml-4 text-yellow-700 text-sm">
+                                                <li>National Guard units deployed to urban areas</li>
+                                                <li>Peaceful protests organizing in response</li>
+                                                <li>Community safety measures being implemented</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Our Response:</strong> We are monitoring the situation closely and coordinating with local organizations to ensure community safety and peaceful expression of democratic rights.</p>
+                                        <div class="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                                            <p class="font-semibold text-blue-800">How You Can Help:</p>
+                                            <ul class="list-disc ml-4 text-blue-700 text-sm">
+                                                <li>Stay informed through reliable news sources</li>
+                                                <li>Support peaceful demonstration efforts</li>
+                                                <li>Contact your representatives</li>
+                                                <li>Contribute to community safety initiatives</li>
+                                            </ul>
+                                        </div>
+                                        <p><strong>Together, we can navigate this challenging time while protecting our democratic values and community safety.</strong></p>
+                                        <p class="text-sm"><strong>Stay safe and stay informed,</strong><br>Hassan Wilson<br>Digital Strategist</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <button onclick="openEmailModal('guard')" class="flex-1 bg-blue-accent hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                    <i class="fas fa-eye mr-2"></i>Preview Template
+                                </button>
+                                <button onclick="sendSampleEmail('guard')" class="flex-1 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                                    <i class="fas fa-paper-plane mr-2"></i>Send Sample
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_COMPONENT: EmailTemplate2 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-navy text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-12">Let's Work Together</h2>
+                <p class="text-xl text-slate-300 mb-12">
+                    Ready to bring your digital strategy to life? Let's discuss how my expertise in 
+                    content creation, development, and campaign management can help achieve your goals.
+                </p>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="bg-blue-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Email</h3>
+                        <p class="text-slate-300">knitex303@gmail.com</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                        <p class="text-slate-300">(737) 314-7528</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-accent w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Location</h3>
+                        <p class="text-slate-300">Round Rock, TX</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:knitex303@gmail.com" class="bg-blue-accent hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>Send Email
+                    </a>
+                    <a href="tel:7373147528" class="border border-white hover:bg-white hover:text-navy px-8 py-3 rounded-lg font-semibold transition-colors">
+                        <i class="fas fa-phone mr-2"></i>Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Hassan Wilson. All rights reserved.</p>
+            <p class="mt-2 text-sm">Full Stack Developer | Content Strategist | Digital Innovation</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center modal">
+        <div class="relative max-w-4xl max-h-full p-4">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-2xl z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+        </div>
+    </div>
+
+    <!-- Email Preview Modals -->
+    <!-- @COMPONENT: EmailModal -->
+    <div id="email-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center modal">
+        <div class="bg-white rounded-2xl max-w-2xl max-h-[90vh] overflow-y-auto m-4 w-full">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-navy" id="modal-title">Email Preview</h3>
+                <button onclick="closeEmailModal()" class="text-warm-gray hover:text-navy">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6" id="modal-content">
+                <!-- Email content will be inserted here -->
+            </div>
+            <div class="p-6 border-t bg-slate-50 flex justify-end space-x-3">
+                <button onclick="closeEmailModal()" class="px-6 py-2 text-warm-gray hover:text-navy">Cancel</button>
+                <a id="donate-link" href="#" target="_blank" class="bg-blue-accent hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                    View Donation Page
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- @END_COMPONENT: EmailModal -->
+
+    <script>
+        // Portfolio tab switching
+        (function() {
+            const tabs = document.querySelectorAll('.portfolio-tab');
+            const contents = document.querySelectorAll('.portfolio-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.tab;
+                    
+                    // Update tab styles
+                    tabs.forEach(t => {
+                        t.classList.remove('bg-blue-accent', 'text-white');
+                        t.classList.add('text-warm-gray', 'hover:text-navy');
+                    });
+                    tab.classList.add('bg-blue-accent', 'text-white');
+                    tab.classList.remove('text-warm-gray', 'hover:text-navy');
+                    
+                    // Show/hide content
+                    contents.forEach(content => {
+                        if (content.id === target + '-content') {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        })();
+
+        // Lightbox functionality
+        function openLightbox(src) {
+            document.getElementById('lightbox-image').src = src;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.getElementById('lightbox').classList.add('flex');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.getElementById('lightbox').classList.remove('flex');
+        }
+
+        // Email modal functionality
+        function openEmailModal(template) {
+            const modal = document.getElementById('email-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            const donateLink = document.getElementById('donate-link');
+
+            if (template === 'crockett') {
+                title.textContent = 'Jasmine Crockett Gerrymandering Action Email';
+                donateLink.href = 'https://secure.actblue.com/donate/jc-gads-26?gad_source=1&gad_campaignid=22669709716&gbraid=0AAAAA_7Sgnv9YcCYQqZcAh66LrQwcXfR5&gclid=Cj0KCQjw-4XFBhCBARIsAAdNOkvaYYuDHFnqM2f4XYoA39mDHarP1ShbWO2nZDi93N5a-SbDj_0qnIQaAr_7EALw_wcB';
+                content.innerHTML = `
+                    <div class="email-preview bg-white border rounded-lg p-6">
+                        <div class="border-b pb-4 mb-4">
+                            <h4 class="font-semibold text-lg">Texas Gerrymandering Crisis - Rep. Crockett Needs Your Support</h4>
+                            <p class="text-sm text-warm-gray">To: Sample Recipient | From: knitex303@gmail.com</p>
+                        </div>
+                        <div class="space-y-4">
+                            <p><strong>Dear [Name],</strong></p>
+                            <p>Gerrymandering in Texas has reached a breaking point. Our districts are being manipulated to silence minority voices and undermine fair representation.</p>
+                            <p><strong>Representative Jasmine Crockett (D-TX)</strong> is leading the fight for fair redistricting, but she needs our immediate support to continue this critical work.</p>
+                            <div class="bg-red-50 p-4 rounded border-l-4 border-red-400">
+                                <p class="font-semibold text-red-800">The Facts:</p>
+                                <ul class="list-disc ml-4 text-red-700">
+                                    <li>Texas loses representation through manipulated district lines</li>
+                                    <li>Communities of color are systematically divided</li>
+                                    <li>Fair elections require fair maps</li>
+                                </ul>
+                            </div>
+                            <p><strong>Your action today can help Rep. Crockett fight back against these anti-democratic practices.</strong></p>
+                            <div class="text-center my-6">
+                                <a href="${donateLink.href}" class="bg-blue-600 text-white px-8 py-4 rounded-lg inline-block font-semibold text-lg hover:bg-blue-700 transition-colors">
+                                    SUPPORT REP. CROCKETT TODAY →
+                                </a>
+                            </div>
+                            <p>Every dollar helps Rep. Crockett continue her vital work in Congress fighting for fair representation and democratic values.</p>
+                            <p><strong>Thank you for standing with us,</strong><br>Hassan Wilson<br>Digital Strategist</p>
+                        </div>
+                    </div>
+                `;
+            } else if (template === 'guard') {
+                title.textContent = 'National Guard Response Action Email';
+                donateLink.style.display = 'none';
+                content.innerHTML = `
+                    <div class="email-preview bg-white border rounded-lg p-6">
+                        <div class="border-b pb-4 mb-4">
+                            <h4 class="font-semibold text-lg">Urgent: National Guard Deployment Response - Community Safety Alert</h4>
+                            <p class="text-sm text-warm-gray">To: Sample Recipient | From: knitex303@gmail.com</p>
+                        </div>
+                        <div class="space-y-4">
+                            <p><strong>Community Members,</strong></p>
+                            <p>President Trump's deployment of National Guard troops has escalated tensions nationwide, with significant protest activity emerging across multiple cities.</p>
+                            <div class="bg-yellow-50 p-4 rounded border-l-4 border-yellow-400">
+                                <p class="font-semibold text-yellow-800">Current Situation:</p>
+                                <ul class="list-disc ml-4 text-yellow-700">
+                                    <li>National Guard units deployed to urban areas</li>
+                                    <li>Peaceful protests organizing in response</li>
+                                    <li>Community safety measures being implemented</li>
+                                </ul>
+                            </div>
+                            <p><strong>Our Response:</strong> We are monitoring the situation closely and coordinating with local organizations to ensure community safety and peaceful expression of democratic rights.</p>
+                            <div class="bg-blue-50 p-4 rounded border-l-4 border-blue-400">
+                                <p class="font-semibold text-blue-800">How You Can Help:</p>
+                                <ul class="list-disc ml-4 text-blue-700">
+                                    <li>Stay informed through reliable news sources</li>
+                                    <li>Support peaceful demonstration efforts</li>
+                                    <li>Contact your representatives</li>
+                                    <li>Contribute to community safety initiatives</li>
+                                </ul>
+                            </div>
+                            <p><strong>Together, we can navigate this challenging time while protecting our democratic values and community safety.</strong></p>
+                            <p><strong>Stay safe and stay informed,</strong><br>Hassan Wilson<br>Digital Strategist</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeEmailModal() {
+            const modal = document.getElementById('email-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function sendSampleEmail(template) {
+            // TODO: Implement email sending functionality with backend API
+            // This would typically integrate with an email service like SendGrid, Mailgun, etc.
+            let subject, message;
+            
+            if (template === 'crockett') {
+                subject = 'Sample: Texas Gerrymandering Crisis - Rep. Crockett Needs Your Support';
+                message = 'This is a sample of the Jasmine Crockett gerrymandering action email template created by Hassan Wilson.';
+            } else if (template === 'guard') {
+                subject = 'Sample: National Guard Deployment Response - Community Safety Alert';
+                message = 'This is a sample of the National Guard response email template created by Hassan Wilson.';
+            }
+
+            // For demo purposes, we'll create a mailto link
+            const mailtoLink = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message + '\n\nTo see the full email template, visit Hassan Wilson\'s portfolio at [website URL].\n\nContact Hassan at knitex303@gmail.com for custom email template design services.')}`;
+            
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Sample email template opened in your default email client. This demonstrates the email sending functionality that would be implemented with a backend service.');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close modals when clicking outside
+        document.addEventListener('click', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            const emailModal = document.getElementById('email-modal');
+            
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+            if (e.target === emailModal) {
+                closeEmailModal();
+            }
+        });
+    </script>
+</body>
+</html>

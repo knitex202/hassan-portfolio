@@ -2,55 +2,79 @@ import { Code, Smartphone, TrendingUp, Camera, Palette } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="about" className="px-6 py-24">
+      <div className="container mx-auto max-w-6xl">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-navy mb-12 text-center" data-testid="about-title">
+          <div className="mb-5 text-center">
+            <span className="section-kicker">About</span>
+          </div>
+          <h2 className="section-title mb-5 text-center" data-testid="about-title">
             About Me
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <p className="section-copy mx-auto mb-14 max-w-3xl text-center">
+            I blend engineering, creative execution, and digital strategy so ideas do not stop at mockups.
+            They launch, ship, and reach the right people.
+          </p>
+
+          <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-semibold text-navy mb-6" data-testid="about-heading">
+              <h3 className="mb-6 font-serif text-3xl font-semibold text-navy" data-testid="about-heading">
                 Full Stack Engineer & Content Strategist
               </h3>
-              <p className="text-warm-gray mb-6 leading-relaxed" data-testid="about-description">
-                With over 10 years of professional experience, I combine technical expertise in software development 
-                with strategic content creation and digital marketing. My unique background spans high-profile political 
-                campaigns, innovative fintech solutions, and comprehensive digital strategies.
+              <p className="section-copy mb-6" data-testid="about-description">
+                With over 10 years of professional experience, I combine technical depth in software development with
+                strategic storytelling, campaign execution, and digital marketing. My background spans high-profile
+                political work, fintech product delivery, and founder-led product building.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-slate-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-accent" data-testid="stat-years">10+</div>
-                  <div className="text-sm text-warm-gray">Years Experience</div>
+              <p className="section-copy mb-8">
+                I am also the owner of <span className="font-semibold text-navy">Trendr Social</span>, a social media
+                website and mobile app focused on building engaging digital community experiences.
+              </p>
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <div className="stat-card text-center">
+                  <div className="text-3xl font-bold text-blue-accent" data-testid="stat-years">10+</div>
+                  <div className="mt-2 text-sm uppercase tracking-[0.2em] text-warm-gray">Years Experience</div>
                 </div>
-                <div className="text-center p-4 bg-slate-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-accent" data-testid="stat-languages">5+</div>
-                  <div className="text-sm text-warm-gray">Programming Languages</div>
+                <div className="stat-card text-center">
+                  <div className="text-3xl font-bold text-blue-accent" data-testid="stat-languages">5+</div>
+                  <div className="mt-2 text-sm uppercase tracking-[0.2em] text-warm-gray">Languages</div>
+                </div>
+                <div className="stat-card text-center">
+                  <div className="text-3xl font-bold text-blue-accent">1</div>
+                  <div className="mt-2 text-sm uppercase tracking-[0.2em] text-warm-gray">Owned Platform</div>
                 </div>
               </div>
             </div>
-            <div className="bg-slate-100 p-8 rounded-2xl">
-              <h4 className="text-xl font-semibold text-navy mb-4" data-testid="expertise-title">
+
+            <div className="soft-panel rounded-[2rem] p-8">
+              <div className="mb-6 rounded-[1.5rem] bg-amber-50/80 p-5">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-700">Founder Spotlight</p>
+                <p className="mt-3 text-lg leading-8 text-navy">
+                  Trendr Social reflects my approach to product work: build the technology, shape the brand,
+                  and understand the audience deeply enough to make the experience stick.
+                </p>
+              </div>
+              <h4 className="mb-5 text-xl font-semibold text-navy" data-testid="expertise-title">
                 Core Expertise
               </h4>
               <div className="space-y-3">
-                <div className="flex items-center" data-testid="expertise-fullstack">
+                <div className="flex items-center rounded-2xl bg-white/70 px-4 py-3" data-testid="expertise-fullstack">
                   <Code className="text-blue-accent mr-3" size={20} />
                   <span>Full Stack Development (Java, JavaScript, Python, C++)</span>
                 </div>
-                <div className="flex items-center" data-testid="expertise-mobile">
+                <div className="flex items-center rounded-2xl bg-white/70 px-4 py-3" data-testid="expertise-mobile">
                   <Smartphone className="text-blue-accent mr-3" size={20} />
                   <span>Mobile Development (Kotlin, Android)</span>
                 </div>
-                <div className="flex items-center" data-testid="expertise-strategy">
+                <div className="flex items-center rounded-2xl bg-white/70 px-4 py-3" data-testid="expertise-strategy">
                   <TrendingUp className="text-blue-accent mr-3" size={20} />
                   <span>Digital Strategy & Campaign Management</span>
                 </div>
-                <div className="flex items-center" data-testid="expertise-photography">
+                <div className="flex items-center rounded-2xl bg-white/70 px-4 py-3" data-testid="expertise-photography">
                   <Camera className="text-blue-accent mr-3" size={20} />
                   <span>Photography & Videography</span>
                 </div>
-                <div className="flex items-center" data-testid="expertise-design">
+                <div className="flex items-center rounded-2xl bg-white/70 px-4 py-3" data-testid="expertise-design">
                   <Palette className="text-blue-accent mr-3" size={20} />
                   <span>Graphic Design & Content Creation</span>
                 </div>

@@ -11,7 +11,7 @@ import EmailModal from "@/components/email-modal";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="site-shell min-h-screen">
       <Navigation />
       <HeroSection />
       <AboutSection />
